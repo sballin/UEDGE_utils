@@ -825,14 +825,15 @@ if ipython:
     
     
 def notify(message='Run complete'):
-    message += ', iterm=%d' % bbb.iterm
-    msg = MIMEText(message)
-    msg["To"] = "***REMOVED***@vtext.com"
-    msg["Subject"] = "UEDGE"
-    # -t: extract recipients from message headers
-    # -oi: don't treat a line with only "." as the end of input
-    p = subprocess.Popen(["sendmail", "-t", "-oi"], stdin=subprocess.PIPE)
-    p.communicate(msg.as_bytes())
+    pass
+    # message += ', iterm=%d' % bbb.iterm
+    # msg = MIMEText(message)
+    # msg["To"] = "user@email.com"
+    # msg["Subject"] = "UEDGE"
+    # # -t: extract recipients from message headers
+    # # -oi: don't treat a line with only "." as the end of input
+    # p = subprocess.Popen(["sendmail", "-t", "-oi"], stdin=subprocess.PIPE)
+    # p.communicate(msg.as_bytes())
     
     
 def tanh(psi, c1, c2, c3, c4, c5, c6, c7, c8, c9):
